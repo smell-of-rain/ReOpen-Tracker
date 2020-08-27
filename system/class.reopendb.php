@@ -125,6 +125,7 @@ class reopen_db extends PDO
         $expire    = $time + $expire_time;
         $str       = PDO::PARAM_STR;
         $num       = PDO::PARAM_INT;
+		$int 	   = PDO::PARAM_INT;
         $values = array(
                     array('key' => ':hash',       'value' => $data['info_hash'], 'type' => $str),
                     array('key' => ':ip',         'value' => $ip,                'type' => $num),
@@ -314,7 +315,7 @@ class reopen_db extends PDO
                  "expire_time > ". time() ." LIMIT :getnum";
         $str   = PDO::PARAM_STR;
         $num   = PDO::PARAM_INT;
-        
+        $int   = PDO::PARAM_INT;
         $values = array(
                     array('key' => ':hash',   'value' => $hash,       'type' => $str),
                     array('key' => ':getnum', 'value' => $num_to_get, 'type' => $num)

@@ -41,7 +41,7 @@ define( 'DB_USER', '' );
 define( 'DB_PASS', '' );
 
 // Database Name (also used as SQLite filename)
-define( 'DB_NAME'  , 'reopentracker' );
+define( 'DB_NAME'  , 'smellofrain' );
 
 // Database Table Name
 define( 'DB_TABLE' , 'peers' );
@@ -83,7 +83,7 @@ define( 'REQUIRE_ANNOUNCE_PROTOCOL', 'standard' );
 if( !defined('DS') ) define( 'DS', DIRECTORY_SEPARATOR );
 
 // Base Directory Path
-define( 'ROT_PATH', realpath(dirname(__FILE__)) . DS );
+define( 'ROT_PATH', __DIR__ . DS );
 
 // System Directory Path
 define( 'ROT_SYSTEM_PATH', ROT_PATH .'system'. DS );

@@ -11,9 +11,9 @@
  */
 header('Content-Type: text/plain; charset=utf-8');
 require 'config.inc.php';
+require ROT_SYSTEM_PATH .'functions.reopentracker.php';
 require ROT_SYSTEM_PATH .'class.reopendb.php';
 require ROT_SYSTEM_PATH .'class.reopentracker.php';
-require ROT_SYSTEM_PATH .'functions.reopentracker.php';
 //log_request('announce');
 $rotdb = new reopen_tracker;
 

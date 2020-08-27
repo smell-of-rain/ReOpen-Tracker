@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * ReOpenTracker - Core Functions
  *
