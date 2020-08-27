@@ -7,9 +7,9 @@
  *
  * This application requires PHP5.
  */
-require_once 'config.inc.php';
-require 'db.php';
 
-$otdb = new otdb;
 // Delete records that have an expire time over 3 days old.
-$otdb->query("DELETE FROM ". DB_TABLE ." WHERE expire_time < '". time() - (60 * 60 * 24 * 3) ."'");
+$time = time() - 259200;
+$sql_table_user = "DELETE FROM ". 'peers' ." WHERE expire_time < '". $time ."'";
+$db_init = new SQLite3("smellofrain.sdb");
+$result_table_user = $db_init->exec($sql_table_user);
